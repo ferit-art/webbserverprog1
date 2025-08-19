@@ -44,7 +44,7 @@ services:
     container_name: pma
     restart: always
     environment:
-      - PMA_HOST= mariadb
+      - PMA_HOST=mariadb
       - TZ=Europe/Stockholm
     ports:
       - 8080:80
