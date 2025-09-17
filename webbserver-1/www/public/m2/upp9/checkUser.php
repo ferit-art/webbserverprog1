@@ -1,6 +1,6 @@
 <?php
-include '../inc/function.php';
-include 'Person.php';
+include '../../../inc/function.php';
+include '../../../inc/upp9/Person.php';
 
 if (!isset($_POST['user'])) {
     header("location: index.html");
@@ -8,11 +8,9 @@ if (!isset($_POST['user'])) {
 }
 
 $name = cleanData($_POST['user']);
-$pwd = cleanData($_POST['pwd']);
+$pwd = $_POST['pwd'];
 
-$file = "User.dat";
-
-//saveUsers($userArray);
+$file = "../../../inc/upp9/User.dat";
 
 if (file_exists($file)) {
     $userArray = unserialize(file_get_contents($file));
@@ -26,8 +24,8 @@ if (file_exists($file)) {
 }
 
 for ($i = 0; $i < count($userArray); $i++) {
-    if ($name == $userArray[$i]->user && $pwd == $userArray[$i]->pwd) {
-        header("location: userPage.php?name=" . $userArray[$i]->name);
+    if ($name == $userArray[$i]->getUser() && $pwd == $userArray[$i]->getPwd()) {
+        header("location: userPage.php?name=" . $userArray[$i]->getName());
         exit;
     }
 }

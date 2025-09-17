@@ -4,8 +4,8 @@ if (!isset($_POST['user'])) {
     exit;
 }
 
-include '../inc/users.php';
-include '../inc/function.php';
+include '../../../inc/upp8/users.php';
+include '../../../inc/function.php';
 
 $usr = cleanData($_POST['user']);
 $pwd = cleanData($_POST['pwd']);

@@ -28,9 +28,9 @@
         </fieldset>
 
         <?php
-        include '../inc/function.php';
+        include '../../../inc/function.php';
 
-        if (isset($_POST['namn'])) {
+        if (isset($_POST['namn'], $_POST['efternamn'], $_POST['annamn'], $_POST['kod'])) {
 
             $data = array(
                 "name" => $_POST['namn'],

@@ -9,9 +9,9 @@
 
 <body>
     <?php
-    include '../inc/function.php';
+    include '../../../inc/function.php';
 
-    if (isset($_POST['namn'])) {
+    if (isset($_POST['namn'], $_POST['efternamn'], $_POST['annamn'], $_POST['kod'])) {
 
         try {
             $data = array(
@@ -31,9 +31,6 @@
             header("location: index.html");
             exit();
         }
-    } else {
-        header("location: index.html");
-        exit();
     }
     ?>
 </body>
