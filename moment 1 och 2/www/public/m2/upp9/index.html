@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    <form action="checkUser.php" method="POST">
+
+        <fieldset>
+            <legend>Logga in</legend>
+            <label>Användarnamn</label><br>
+            <input type="text" name="user">
+            <br>
+            <label>Lösenord</label><br>
+            <input type="password" name="pwd">
+            <br>
+            <input type="submit" value="Loggin">
+        </fieldset>
+    </form>
+
+    <form action="addPerson.php" method="POST">
+
+        <fieldset>
+            <legend>Skapa konto</legend>
+            <label>Namn</label><br>
+            <input type="text" name="name1"><br>
+            <label>Ålder</label><br>
+            <input type="text" name="age1"><br>
+            <label>Mobilnummer</label><br>
+            <input type="text" name="phone1"><br>
+            <label>Användarnamn</label><br>
+            <input type="text" name="user1"><br>
+            <label>Lösenord</label><br>
+            <input type="text" name="pwd1"><br>
+            <input type="submit" value="Skapa">
+        </fieldset>
+    </form>
+</body>
+
+</html>
